@@ -348,6 +348,7 @@
   * [target.url()](#targeturl)
   * [target.worker()](#targetworker)
 - [class: CDPSession](#class-cdpsession)
+  * [cdpSession.connection()](#cdpsessionconnection)
   * [cdpSession.detach()](#cdpsessiondetach)
   * [cdpSession.send(method[, ...paramArgs])](#cdpsessionsendmethod-paramargs)
 - [class: Coverage](#class-coverage)
@@ -4112,6 +4113,11 @@ await client.send('Animation.setPlaybackRate', {
 });
 ```
 
+#### cdpSession.connection()
+- returns: <[Connection]>
+
+Returns the underlying connection associated with the session. Can be used to obtain other related sessions.
+
 #### cdpSession.detach()
 - returns: <[Promise]>
 
@@ -4122,6 +4128,7 @@ to send messages.
 - `method` <[string]> protocol method name
 - `...paramArgs` <[Object]> Optional method parameters
 - returns: <[Promise]<[Object]>>
+
 
 ### class: Coverage
 
